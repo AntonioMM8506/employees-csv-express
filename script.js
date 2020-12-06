@@ -28,6 +28,12 @@ app.get(path, function(req, res) {
       console.error(err.message)
     }
 
+    //The index argument is needed
+    if(index[0] == undefined)
+    {
+	    console.log("Argument index missed")
+    }
+    
     //Splits the data of the csv in order to manipulate it as rows, then
     //the lines array is splited once again in order to generate a map
     //with its corresponding headers
